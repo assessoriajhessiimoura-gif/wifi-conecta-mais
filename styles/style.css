@@ -1,138 +1,13 @@
-/* Mobile Plans */
-.mobile-plans {
-    padding: var(--spacing-20) 0;
-    background: var(--gray-50);
-    position: relative;
-}
-
-/* Carrossel */
-.mobile-carousel {
-    position: relative;
-    overflow: hidden;
-}
-
-/* Container dos cards */
-.mobile-plans-container {
-    display: flex;
-    gap: var(--spacing-6);
-    overflow-x: auto; /* rolagem horizontal */
-    -webkit-overflow-scrolling: touch; /* suave no iOS */
-    scroll-snap-type: x mandatory; /* trava nos cards */
-    padding-bottom: var(--spacing-2);
-    scroll-padding-left: var(--spacing-6);
-}
-
-.mobile-plans-container::-webkit-scrollbar {
-    display: none; /* esconde a barra de rolagem */
-}
-
-/* Card individual */
-.mobile-plan-card {
-    flex: 0 0 80%; /* ocupa 80% da largura da tela */
-    min-width: 260px;
-    background: var(--white);
-    border-radius: var(--radius-2xl);
-    padding: var(--spacing-6);
-    box-shadow: var(--shadow-md);
-    position: relative;
-    transition: var(--transition);
-    scroll-snap-align: start; /* cada card alinha no início */
-}
-
-.mobile-plan-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-xl);
-}
-
-.mobile-plan-card.featured {
-    border: 2px solid var(--accent);
-}
-
-/* Badge de destaque */
-.mobile-featured-badge {
-    position: absolute;
-    top: var(--spacing-4);
-    right: var(--spacing-4);
-    background: var(--accent);
-    color: var(--white);
-    padding: var(--spacing-1) var(--spacing-3);
-    border-radius: var(--radius-full);
-    font-size: var(--font-size-xs);
-    font-weight: 600;
-}
-
-/* Header do card */
-.mobile-plan-header {
-    text-align: center;
-    margin-bottom: var(--spacing-6);
-}
-
-.mobile-data {
-    font-size: var(--font-size-2xl);
-    font-weight: 700;
-    color: var(--primary);
-    margin-bottom: var(--spacing-2);
-}
-
-.mobile-price {
-    display: flex;
-    align-items: baseline;
-    justify-content: center;
-    gap: var(--spacing-1);
-}
-
-/* Features */
-.mobile-features {
-    margin-bottom: var(--spacing-6);
-}
-
-.mobile-feature {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-3);
-    padding: var(--spacing-2) 0;
-}
-
-.mobile-feature i {
-    color: var(--secondary);
-    font-size: var(--font-size-lg);
-}
-
-/* Botão principal */
-.mobile-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--spacing-2);
-    background: #25d366;
-    color: var(--white);
-    padding: var(--spacing-3) var(--spacing-4);
-    border-radius: var(--radius-lg);
-    text-decoration: none;
-    font-weight: 600;
-    transition: var(--transition);
-    width: 100%;
-    justify-content: center;
-}
-
-.mobile-btn:hover {
-    background: #1da851;
-}
-
-.mobile-btn:focus {
-    outline: 3px solid var(--accent);
-    outline-offset: 2px;
-}
-
 /* Navegação do carrossel */
 .carousel-nav {
     position: absolute;
-    width: 100%;
     top: 50%;
+    width: 100%;
     transform: translateY(-50%);
     display: flex;
     justify-content: space-between;
     padding: 0 var(--spacing-4);
-    pointer-events: none; /* só os botões clicam */
+    pointer-events: none; /* permite clicar apenas nos botões */
 }
 
 .carousel-btn {
@@ -155,15 +30,3 @@
     transform: scale(1.1);
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .mobile-plan-card {
-        flex: 0 0 75%; /* no mobile ocupa 75% da tela */
-    }
-}
-
-@media (max-width: 480px) {
-    .mobile-plan-card {
-        flex: 0 0 90%; /* em telas muito pequenas */
-    }
-}
